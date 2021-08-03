@@ -149,7 +149,7 @@ public class ResourceCentre {
 		String output = "";
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++) {
-
+//update
 			String assetTag = chromebookList.get(i).getAssetTag();
 			String description = chromebookList.get(i).getDescription();
 			String showAvailability = ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable());
