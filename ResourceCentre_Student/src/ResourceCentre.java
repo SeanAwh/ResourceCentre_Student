@@ -128,12 +128,7 @@ public class ResourceCentre {
 
 		for (int i = 0; i < camcorderList.size(); i++) {
 
-			String assetTag = camcorderList.get(i).getAssetTag();
-			String description = camcorderList.get(i).getDescription();
-			String showAvailability = ResourceCentre.showAvailability(camcorderList.get(i).getIsAvailable());
-			String dueDate = camcorderList.get(i).getDueDate();
-			int opticalZoom = camcorderList.get(i).getOpticalZoom();
-			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", assetTag, description, showAvailability, dueDate,opticalZoom);
+			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(), camcorderList.get(i).getDescription(), ResourceCentre.showAvailability(camcorderList.get(i).getIsAvailable()), camcorderList.get(i).getDueDate(),camcorderList.get(i).getOpticalZoom());
 		}
 		return output;
 	}
@@ -149,13 +144,8 @@ public class ResourceCentre {
 		String output = "";
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++) {
-//update
-			String assetTag = chromebookList.get(i).getAssetTag();
-			String description = chromebookList.get(i).getDescription();
-			String showAvailability = ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable());
-			String dueDate = chromebookList.get(i).getDueDate();
-			String os = chromebookList.get(i).getOs();
-			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", assetTag, description, showAvailability, dueDate, os);
+
+			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(), chromebookList.get(i).getDescription(), ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()), chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
 		}
 		return output;
 	}
